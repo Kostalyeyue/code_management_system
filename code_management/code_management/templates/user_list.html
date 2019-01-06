@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>user_list</h1>
+<table border="1">
+	<tr>
+		<th>ID</th>
+		<th>用户名</th>
+		<th>昵称</th>
+		<th>查看代码提交记录</th>
+	</tr>
+	<tbody>
+	{% for user in users %}
+	<tr>
+		<td>{{user.id}}</td>
+		<td>{{user.username}}</td>
+		<td>{{user.nickname}}</td>
+		<td><a href="/detail/{{user.id}}">查看</a></td>
+	</tr>
+	{% endfor %}
+	</tbody>
+
+
+</table>
+{% endblock %}

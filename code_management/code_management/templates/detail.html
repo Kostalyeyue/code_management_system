@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1>user_list</h1>
+<table border="1">
+	<tr>
+		<th>ID</th>
+		<th>行数</th>
+		<th>日期</th>
+	</tr>
+	<tbody>
+	{% for user in records %}
+	<tr>
+		<td>{{user.user_id}}</td>
+		<td>{{user.line}}</td>
+		<td>{{user.ctime}}</td>
+	</tr>
+	{% endfor %}
+	</tbody>
+
+
+</table>
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		.header {
+			height: 48px;
+			background-color: #2aabd2;
+		}
+
+		body {
+			margin-top: 0;
+		}
+
+		.header_page {
+			float: right;
+			font-weight: bold;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+
+<div class="header">
+	<div class="header_page">
+		<div>{{ session['user_info']['nickname'] }}
+			<a href="/logout">注销</a>
+		</div>
+	</div>
+</div>
+<div>
+	<div style="width: 20%;float: left">
+		<ul>
+			<li><a href="/user_list">用户列表</a></li>
+			<li><a href="/upload">上传代码</a></li>
+		</ul>
+	</div>
+	<div style="width: 80%;float: left">
+		{% block content %}
+		{% endblock %}
+	</div>
+</div>
+
+</body>
+</html>
